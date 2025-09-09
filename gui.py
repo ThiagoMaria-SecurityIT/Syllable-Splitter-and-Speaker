@@ -4,7 +4,7 @@ import pyphen
 import subprocess
 import sys
 
-# --- Core Logic (remains the same) ---
+# --- Core Logic ---
 def split_word_into_syllables(word):
     dic = pyphen.Pyphen(lang='en_US')
     hyphenated_word = dic.inserted(word)
@@ -18,7 +18,7 @@ class SyllableSplitterApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Syllable Splitter")
-        self.root.geometry("450x400") # Increased height for voice options
+        self.root.geometry("450x400") 
 
         # --- Style Configuration ---
         self.BG_COLOR = "#f0f0f0"
@@ -43,7 +43,7 @@ class SyllableSplitterApp:
         content_frame = tk.Frame(self.root, padx=20, pady=20, bg=self.BG_COLOR)
         content_frame.pack(expand=True, fill="both")
 
-        # ... (Input and instruction labels are the same) ...
+        # ... Input and instruction labels ...
         input_label = tk.Label(content_frame, text="Enter a word:", font=self.default_font, bg=self.BG_COLOR, fg=self.TEXT_COLOR)
         input_label.pack(anchor="w")
         self.word_entry = tk.Entry(content_frame, font=self.entry_font, width=40, relief="solid", bd=1)
@@ -52,7 +52,7 @@ class SyllableSplitterApp:
         instruction_label = tk.Label(content_frame, text="Please enter only one word containing only letters.", font=self.instruction_font, bg=self.BG_COLOR, fg="grey")
         instruction_label.pack(anchor="w", pady=(0, 10))
 
-        # --- NEW: Voice Selection Frame ---
+        # --- Voice Selection Frame ---
         voice_frame = tk.LabelFrame(content_frame, text="Select Voice", font=self.default_font, bg=self.BG_COLOR, fg=self.TEXT_COLOR, padx=10, pady=5)
         voice_frame.pack(pady=10, fill="x")
 
@@ -85,7 +85,7 @@ class SyllableSplitterApp:
         self.result_display_label = tk.Label(content_frame, textvariable=self.result_text, font=self.result_font, wraplength=380, justify="left", bg="white", relief="solid", bd=1, anchor="nw")
         self.result_display_label.pack(fill="x", ipady=8, ipadx=5)
 
-    # --- MODIFIED: on_speak_button_click now sends the selected voice ---
+    # --- On_speak_button_click now sends the selected voice ---
     def on_speak_button_click(self):
         """Calls the speak.py script with the text and the selected voice."""
         text_to_speak = self.result_text.get()
@@ -120,3 +120,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
