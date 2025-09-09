@@ -1,0 +1,2 @@
+pyphen
+pyttsx3
