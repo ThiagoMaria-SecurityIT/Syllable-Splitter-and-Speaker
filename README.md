@@ -26,7 +26,7 @@ The development of this project was iterative, starting with a basic command-lin
 6.  [Future Implementations Under Review](#future-implementations-under-review)
 7.  [A Note for Linux Users](#a-note-for-linux-users)
 8.  [AI Transparency: A Note on Collaboration](#ai-transparency-a-note-on-collaboration)
-9.  [About Me &+ Contact](#about-me--contact)  
+9.  [About Me & Contact](#about-me--contact)  
 
 ---
 
