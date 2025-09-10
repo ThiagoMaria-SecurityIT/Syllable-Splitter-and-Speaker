@@ -7,11 +7,14 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
 </p>
 
+>[!Note]   
+>Try the [AI Syllable and Text-to-Speech Tool Live](https://huggingface.co/spaces/ThiSecur/tts3-project )
+
 This project is an educational tool, built with Python, that demonstrates how to create a simple desktop application from the ground up. The application takes an English word, splits it into its phonetic syllables, and reads the result aloud using a Text-to-Speech (TTS ) engine.
 
 The development of this project was iterative, starting with a basic command-line script and evolving into a full-featured graphical application. It serves as a practical case study for learners interested in GUI development, code organization, and integrating external tools.
 
-<img width="442" height="427" alt="image" src="https://github.com/user-attachments/assets/fe56fe03-0f22-4504-bcf5-ffab88ba1f64" />  
+<img width="442" height="427" alt="image" src="https://github.com/user-attachments/assets/fe56fe03-0f22-4504-bcf5-ffab88ba1f64" />    
 
 
 ---
@@ -23,7 +26,7 @@ The development of this project was iterative, starting with a basic command-lin
 3.  [Project Structure](#project-structure)
 4.  [How to Run the Project](#how-to-run-the-project)
 5.  [Known Limitations](#known-limitations)
-6.  [Future Implementations Under Review](#future-implementations-under-review)
+6.  [AI Implementations](ai-implementations)
 7.  [A Note for Linux Users](#a-note-for-linux-users)
 8.  [AI Transparency: A Note on Collaboration](#ai-transparency-a-note-on-collaboration)
 9.  [About Me & Contact](#about-me--contact)  
@@ -109,14 +112,17 @@ This happens because the TTS engine is designed to pronounce whole words, not is
 
 ---
 
-### Future Implementations Under Review
+### AI Implementations 
 
-To overcome the limitations of native TTS and to explore modern AI development, we are currently reviewing three advanced architectural approaches:
+To overcome the limitations of native TTS and to explore modern AI development, we reviwed three advanced architectural approaches:
 
-1.  **The Gradio API Model:** The local desktop app would call an API for a Hugging Face (HF) Space that hosts a powerful AI TTS model (like `suno/bark`). This would provide extremely high-quality audio while keeping the local app lightweight.
-2.  **The Full Local Model:** The AI TTS model would be downloaded and run directly on the user's machine. This would allow for offline use but would require powerful hardware and a large initial download.
-3.  **The Full Hugging Face Model:** The entire application, including the syllable-splitting logic, would be moved into a single Gradio web app on Hugging Face. This would make the tool instantly accessible to anyone with a web browser, with zero installation required.
+1.  **The Gradio API Model:** The local desktop app would call an API for a Hugging Face (HF) Space that hosts a powerful AI TTS model (like `suno/bark` and/or `Coqui TTS`).
+2.  **The Local Model:** The AI TTS model would be downloaded and run directly on the user's machine. This would allow for offline use but would require powerful hardware and a large initial download.
+3.  **The Online Hugging Face Space:** The entire application, including the syllable-splitting logic, would be moved into a single Gradio web app on Hugging Face. This would make the tool instantly accessible to anyone with a web browser, with zero installation required.
 
+>[!Note]
+>We choose the Hugging Face Space  
+>Try the [AI Syllable and Text-to-Speech Tool Live](https://huggingface.co/spaces/ThiSecur/tts3-project )  
 ---
 
 ### A Note for Linux Users
@@ -127,7 +133,7 @@ This application was primarily developed and tested on Windows 11. The `pyttsx3`
     ```bash
     sudo apt-get install espeak
     ```
-*   **AI Version as an Alternative:** Given the potential for configuration issues and the limitations of older TTS engines, Linux users might find a better experience using the web-based AI version of the TTS, which can be accessed here: [HF Space TTS Project](https://huggingface.co/spaces/ThiSecur/tts2-project ). This provides higher-quality audio and requires no local setup.
+*   **AI Version as an Alternative:** Given the potential for configuration issues and the limitations of older TTS engines, Linux users might find a better experience using the web-based AI version of the TTS, which can be accessed here: [HF Space TTS Project](https://huggingface.co/spaces/ThiSecur/tts2-project ) or the complete version here [AI Syllable and Text-to-Speech Tool Live](https://huggingface.co/spaces/ThiSecur/tts3-project ). This provides higher-quality audio and requires no local setup.
 
 ---
 
